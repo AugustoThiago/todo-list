@@ -18,6 +18,7 @@ export class AppComponent {
   loadStorage() {
     const data = localStorage.getItem('todos');
     this.list = JSON.parse(data);
+
   }
   
   addTask(item:string){
@@ -29,5 +30,4 @@ export class AppComponent {
     this.list = this.list.filter(item=>item.id!==id);
     this.saveStorage();
   }
-
 }
