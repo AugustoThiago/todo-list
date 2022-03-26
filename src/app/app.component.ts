@@ -12,6 +12,7 @@ export class AppComponent {
   saveStorage() {
     const data = JSON.stringify(this.list);
     localStorage.setItem('todos', data);
+    console.warn(data);
   }
   
   loadStorage() {
