@@ -1,4 +1,18 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>{{title}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <input type="text" placeholder="Entre com uma nova tarefa" class="m-2" #task>
+      <button (click)="addTask(task.value)" class="btn btn-dark btn-sm">Add Nova Tarefa</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col pt-3">
+      <ul *ngFor="let item of list">
+        <li>{{item.name}} <button (click)="removeTask(item.id)" class="btn btn-dark btn-sm">Concluída</button> </li>
+      </ul>
+    </div>
+  </div>
+</div>
