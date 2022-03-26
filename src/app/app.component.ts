@@ -30,4 +30,7 @@ export class AppComponent {
     this.list = this.list.filter(item=>item.id!==id);
     this.saveStorage();
   }
+  constructor(){
+    this.loadStorage();
+  }
 }
